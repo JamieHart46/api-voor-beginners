@@ -3,7 +3,44 @@ const fallbackWebsite = "https://youtu.be/dQw4w9WgXcQ";
 const endpointSquad = 'items/person/?filter={"squads":{"squad_id":15}}';
 
 
+const EverybodyURL = baseURL + endpointSquad;
 
+getData(EverybodyURL).then( dataVanIedereen => {
+
+let person = dataVanIedereen.data;
+
+let everbodysection = document.querySelector("section:nth-of-type(2)")
+
+    person.forEach( person => {
+
+     let personName = person.name;
+     let personImg = person.avatar;
+     let personwebsite = person.website;
+
+     let getaTussenBen1 = Math.random();
+     let getaTussenBen5 = getaTussenBen1 + 5;
+     let afgerondGetalTussenBen5 = afgerondGetalTussenBen4 + 1;
+
+     if (personImg ) {
+     } else{
+         personImg = "images/placeholder2.svg";
+     }
+
+     if( personwebsite) {
+     } else{
+        personwebsite = "fallbacksite";
+     }
+        
+      let personHTML = `<article>
+      <h3>${personName}</h3>
+      <img src="${personImg}" alt="Krijn Hoetmer">
+      <a href="${personwebsite}" aria-label="de website van Krijn Hoetmer">website</a>
+    </article>`;
+    
+    everbodysection.insertAdjacentHTML( 'beforeend' , personHTML);
+    })
+
+})
 
 
 

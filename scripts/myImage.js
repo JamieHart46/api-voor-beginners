@@ -1,4 +1,26 @@
+getData(myURL).then( data71 => {
+//data ophalen van de gegeven URL en vervolgens de data het processen.
 
+    let mySection = document.querySelector("section:nth-of-type(1)")
+//
+
+    let myAvatar = data71.data.avatar;
+//Avatar van de opgehaalde data uithalen.
+
+    let myName = data71.data.name;
+//Naam van de opgehaalde data uithalen.
+
+    let myImage = document.createElement("img");
+//nieuw afbeelding element maken in JS.
+
+   
+
+
+
+    myImage.src = myAvatar;
+
+    mySection.appendChild(myImage);
+} );
 
 
 
