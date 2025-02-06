@@ -17,9 +17,10 @@ let everbodysection = document.querySelector("section:nth-of-type(2)")
      let personImg = person.avatar;
      let personwebsite = person.website;
 
-     let getaTussenBen1 = Math.random();
-     let getaTussenBen5 = getaTussenBen1 + 5;
-     let afgerondGetalTussenBen5 = afgerondGetalTussenBen4 + 1;
+     let getalTussen0en1 = Math.random();
+     let getalTussen0en5 = getalTussen0en1 * 5;
+     let afgerondGetalTussen0en4 = Math.floor(getalTussen0en5);
+     let afgerondGetalTussen1en5 = afgerondGetalTussen0en4 * 1;
 
      if (personImg ) {
      } else{
